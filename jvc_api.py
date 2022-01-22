@@ -221,5 +221,7 @@ class JVC:
                 return False
             elif "Impossible d'envoyer un message au destinaire" in alert:
                 return False
+            elif "Vous ne pouvez pas vous envoyer un message privé." in alert:
+                return False
 
         return True
