@@ -4,7 +4,7 @@ import sys, time
 sys.path.append("./../")
 from jvc_api import JVC
 
-#A simple python script which creates topics
+#A simple python script which create topics
 
 client = JVC("", JVC.FORUM_1825)
 
