@@ -219,5 +219,7 @@ class JVC:
                 return False
             elif "Vous devez sélectionner" in alert:
                 return False
+            elif "Impossible d'envoyer un message au destinaire" in alert:
+                return False
 
         return True
