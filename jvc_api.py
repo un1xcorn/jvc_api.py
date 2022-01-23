@@ -64,12 +64,6 @@ class Topic:
         post_html = HTML(html=post)
 
         if post_html.find(".alert-row", first=True):
-            alert = post_html.find(".alert-row", first=True).text
-            if "Vous devez être connecté" in alert:
-                return False
-            elif "Merci de saisir le captcha." in alert:
-                return False
-            elif "Vous venez de poster un message." in alert:
                 return False
 
         return True
@@ -176,12 +170,6 @@ class JVC:
         post_html = HTML(html=post)
 
         if post_html.find(".alert-row", first=True):
-            alert = post_html.find(".alert-row", first=True).text
-            if "Vous devez être connecté" in alert:
-                return False
-            elif "Merci de saisir le captcha." in alert:
-                return False
-            elif "Vous venez de poster" in alert:
                 return False
 
         return True
@@ -212,16 +200,6 @@ class JVC:
         post_html = HTML(html=post)
 
         if post_html.find(".alert-row", first=True):
-            alert = post_html.find(".alert-row", first=True).text
-            if "Vous devez être connecté" in alert:
-                return False
-            elif "Merci de saisir le captcha." in alert:
-                return False
-            elif "Vous devez sélectionner" in alert:
-                return False
-            elif "Impossible d'envoyer un message au destinaire" in alert:
-                return False
-            elif "Vous ne pouvez pas vous envoyer un message privé." in alert:
                 return False
 
         return True
