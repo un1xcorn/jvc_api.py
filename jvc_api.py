@@ -63,7 +63,7 @@ class Topic:
         post = self.session.post(url, data=headers).text
         post_html = HTML(html=post)
 
-        if post_html.find(".alert-row", first=True):
+        if post_html.find(".alert", first=True):
                 return False
 
         return True
@@ -169,7 +169,7 @@ class JVC:
         post = self.session.post(self.base_url, data=headers).text
         post_html = HTML(html=post)
 
-        if post_html.find(".alert-row", first=True):
+        if post_html.find(".alert", first=True):
                 return False
 
         return True
@@ -199,7 +199,7 @@ class JVC:
         post = self.session.post(url, data=headers).text
         post_html = HTML(html=post)
 
-        if post_html.find(".alert-row", first=True):
+        if post_html.find(".alert", first=True):
                 return False
 
         return True
